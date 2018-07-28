@@ -40,7 +40,7 @@ usage() {
 }
 
 get_opts() {
-		
+
 	this=${0##*/} # Set 'this', 'rank_int', 'confirm', 'countries', and color variables
 	rank_int="6"
 	confirm=true
@@ -50,7 +50,7 @@ get_opts() {
 	Red=$'\e[0;31m';
 	Magenta=$'\e[0;35m';
 	ColorOff=$'\e[0m';
-#	frmt_countries=( "${Magenta}1) ${Green}AM ${Yellow}All-Mirrors - ${Magenta}2) ${Green}AS ${Yellow}All-Https - ${Magenta}3) ${Green}AT ${Yellow}Austria\n${Magenta}4) ${Green}AU ${Yellow}Australia - ${Magenta}5) ${Green}BE ${Yellow}Belgium - ${Magenta}6) ${Green}BG ${Yellow}Bulgaria\n${Magenta}7) ${Green}BR ${Yellow}Brazil - ${Magenta}8) ${Green}BY ${Yellow}Belarus - ${Magenta}9) ${Green}CA ${Yellow}Canada\n${Magenta}10) ${Green}CL ${Yellow}Chile - ${Magenta}11) ${Green}CN ${Yellow}China - ${Magenta}12) ${Green}CO ${Yellow}Columbia\n${Magenta}13) ${Green}CZ ${Yellow}Czech-Republic - ${Magenta}14) ${Green}DE ${Yellow}Germany - ${Magenta}15) ${Green}DK ${Yellow}Denmark\n${Magenta}16) ${Green}EE ${Yellow}Estonia - ${Magenta}17) ${Green}ES ${Yellow}Spain - ${Magenta}18) ${Green}FI ${Yellow}Finland\n${Magenta}19) ${Green}FR ${Yellow}France - ${Magenta}20) ${Green}GB ${Yellow}United-Kingdom - ${Magenta}21) ${Green}HU ${Yellow}Hungary\n${Magenta}22) ${Green}IE ${Yellow}Ireland - ${Magenta}23) ${Green}IL ${Yellow}Isreal - ${Magenta}24) ${Green}IN ${Yellow}India\n${Magenta}25) ${Green}IT ${Yellow}Italy - ${Magenta}26) ${Green}JP ${Yellow}Japan - ${Magenta}27) ${Green}KR ${Yellow}Korea\n${Magenta}28) ${Green}KZ ${Yellow}Kazakhstan - ${Magenta}29) ${Green}LK ${Yellow}Sri-Lanka - ${Magenta}30) ${Green}LU ${Yellow}Luxembourg\n${Magenta}31) ${Green}LV ${Yellow}Lativia - ${Magenta}32) ${Green}MK ${Yellow}Macedonia - ${Magenta}33) ${Green}NC ${Yellow}New-Caledonia\n${Magenta}34) ${Green}NL ${Yellow}Netherlands - ${Magenta}35) ${Green}NO ${Yellow}Norway - ${Magenta}36) ${Green}NZ ${Yellow}New-Zealand\n${Magenta}37) ${Green}PL ${Yellow}Poland - ${Magenta}38) ${Green}PT ${Yellow}Portugal - ${Magenta}39) ${Green}RO ${Yellow}Romania\n${Magenta}40) ${Green}RS ${Yellow}Serbia - ${Magenta}41) ${Green}RU ${Yellow}Russia - ${Magenta}42) ${Green}SE ${Yellow}Sweden\n${Magenta}43) ${Green}SG ${Yellow}Singapore - ${Magenta}44) ${Green}SK ${Yellow}Slovakia - ${Magenta}45) ${Green}TR ${Yellow}Turkey\n${Magenta}46) ${Green}TW ${Yellow}Taiwan - ${Magenta}47) ${Green}UA ${Yellow}Ukraine - ${Magenta}48) ${Green}US ${Yellow}United-States\n${Magenta}49) ${Green}UZ ${Yellow}Uzbekistan - ${Magenta}50) ${Green}VN ${Yellow}Viet-Nam - ${Magenta}51) ${Green}ZA ${Yellow}South-Africa" )	
+#	frmt_countries=( "${Magenta}1) ${Green}AM ${Yellow}All-Mirrors - ${Magenta}2) ${Green}AS ${Yellow}All-Https - ${Magenta}3) ${Green}AT ${Yellow}Austria\n${Magenta}4) ${Green}AU ${Yellow}Australia - ${Magenta}5) ${Green}BE ${Yellow}Belgium - ${Magenta}6) ${Green}BG ${Yellow}Bulgaria\n${Magenta}7) ${Green}BR ${Yellow}Brazil - ${Magenta}8) ${Green}BY ${Yellow}Belarus - ${Magenta}9) ${Green}CA ${Yellow}Canada\n${Magenta}10) ${Green}CL ${Yellow}Chile - ${Magenta}11) ${Green}CN ${Yellow}China - ${Magenta}12) ${Green}CO ${Yellow}Columbia\n${Magenta}13) ${Green}CZ ${Yellow}Czech-Republic - ${Magenta}14) ${Green}DE ${Yellow}Germany - ${Magenta}15) ${Green}DK ${Yellow}Denmark\n${Magenta}16) ${Green}EE ${Yellow}Estonia - ${Magenta}17) ${Green}ES ${Yellow}Spain - ${Magenta}18) ${Green}FI ${Yellow}Finland\n${Magenta}19) ${Green}FR ${Yellow}France - ${Magenta}20) ${Green}GB ${Yellow}United-Kingdom - ${Magenta}21) ${Green}HU ${Yellow}Hungary\n${Magenta}22) ${Green}IE ${Yellow}Ireland - ${Magenta}23) ${Green}IL ${Yellow}Isreal - ${Magenta}24) ${Green}IN ${Yellow}India\n${Magenta}25) ${Green}IT ${Yellow}Italy - ${Magenta}26) ${Green}JP ${Yellow}Japan - ${Magenta}27) ${Green}KR ${Yellow}Korea\n${Magenta}28) ${Green}KZ ${Yellow}Kazakhstan - ${Magenta}29) ${Green}LK ${Yellow}Sri-Lanka - ${Magenta}30) ${Green}LU ${Yellow}Luxembourg\n${Magenta}31) ${Green}LV ${Yellow}Lativia - ${Magenta}32) ${Green}MK ${Yellow}Macedonia - ${Magenta}33) ${Green}NC ${Yellow}New-Caledonia\n${Magenta}34) ${Green}NL ${Yellow}Netherlands - ${Magenta}35) ${Green}NO ${Yellow}Norway - ${Magenta}36) ${Green}NZ ${Yellow}New-Zealand\n${Magenta}37) ${Green}PL ${Yellow}Poland - ${Magenta}38) ${Green}PT ${Yellow}Portugal - ${Magenta}39) ${Green}RO ${Yellow}Romania\n${Magenta}40) ${Green}RS ${Yellow}Serbia - ${Magenta}41) ${Green}RU ${Yellow}Russia - ${Magenta}42) ${Green}SE ${Yellow}Sweden\n${Magenta}43) ${Green}SG ${Yellow}Singapore - ${Magenta}44) ${Green}SK ${Yellow}Slovakia - ${Magenta}45) ${Green}TR ${Yellow}Turkey\n${Magenta}46) ${Green}TW ${Yellow}Taiwan - ${Magenta}47) ${Green}UA ${Yellow}Ukraine - ${Magenta}48) ${Green}US ${Yellow}United-States\n${Magenta}49) ${Green}UZ ${Yellow}Uzbekistan - ${Magenta}50) ${Green}VN ${Yellow}Viet-Nam - ${Magenta}51) ${Green}ZA ${Yellow}South-Africa" )
 	countries=( "1) AM All-Mirrors - 2) AS All-Https - 3) AT Austria\n4) AU Australia - 5) BE Belgium - 6) BG Bulgaria\n7) BR Brazil - 8) BY Belarus - 9) CA Canada\n10) CL Chile - 11) CN China - 12) CO Columbia\n13) CZ Czech-Republic - 14) DE Germany - 15) DK Denmark\n16) EE Estonia - 17) ES Spain - 18) FI Finland\n19) FR France - 20) GB United-Kingdom - 21) HU Hungary\n22) IE Ireland - 23) IL Isreal - 24) IN India\n25) IT Italy - 26) JP Japan - 27) KR Korea\n28) KZ Kazakhstan - 29) LK Sri-Lanka - 30) LU Luxembourg\n31) LV Lativia - 32) MK Macedonia - 33) NC New-Caledonia\n34) NL Netherlands - 35) NO Norway - 36) NZ New-Zealand\n37) PL Poland - 38) PT Portugal - 39) RO Romania\n40) RS Serbia - 41) RU Russia - 42) SE Sweden\n43) SG Singapore - 44) SK Slovakia - 45) TR Turkey\n46) TW Taiwan - 47) UA Ukraine - 48) US United-States\n49) UZ Uzbekistan - 50) VN Viet-Nam - 51) ZA South-Africa" )
 
 	trap ctrl_c INT
@@ -128,14 +128,14 @@ get_opts() {
 }
 
 search() {
-	
+
 	while (true)
 	  do
 		echo "${Green}Country codes:${ColorOff}"
 		echo -e "$countries" | column -t
 		echo -n "${Yellow}Enter the number(s) or code(s) corresponding to your country ${Green}[4 9 US]${Yellow}:${ColorOff} "
 		read code
-			
+
 		for i in $(echo "$code") ; do
 			case "$i" in
 				1)	# Set query to all mirrors
@@ -148,7 +148,7 @@ search() {
 					query="https://www.archlinux.org/mirrorlist/all/https/"
 					break
 				;;
-				[0-9]|[1-4][0-9]|[5][0-1])	
+				[0-9]|[1-4][0-9]|[5][0-1])
 					country_code=$(<<<"$countries" grep -o "$i.*" | awk 'NR==1 {print $2}')
 					country+=$(<<<"$countries" grep -o "$i.*" | awk 'NR==1 {print $3" "}' | sed 's/\\n.*/ /')
 					query+="https://www.archlinux.org/mirrorlist/?country=${country_code} "
@@ -170,7 +170,7 @@ search() {
 				;;
 			esac
 		done
-		
+
 		if ! "$err" ; then
 			break
 		else
@@ -182,7 +182,7 @@ search() {
 	if "$confirm" ; then
 		echo -en "\n${Yellow}You have selected the countries:${Green} $country${Yellow}- is this correct ${Green}[Y/n]:${ColorOff} "
 		read input
-		
+
 		case "$input" in
 			y|Y|yes|Yes|yY|Yy|yy|YY|"")
 				get_list
@@ -216,7 +216,7 @@ get_list() {
 	sed -i 's/#//' /tmp/mirrorlist
 	echo "${Yellow}Please wait while ranking${Green} $country${Yellow}mirrors...${ColorOff}"
 	rankmirrors -n "$rank_int" /tmp/mirrorlist > /tmp/mirrorlist.ranked
-	
+
 	if [ "$?" -gt "0" ]; then
 		echo "${Yellow}[${this}]${Red} Error: ${Yellow}an error occured in ranking mirrorlist exiting..."
 		rm /tmp/{mirrorlist,mirrorlist.ranked} &> /dev/null
@@ -236,7 +236,7 @@ get_list() {
 	else
 		input=""
 	fi
-		
+
 	case "$input" in
 		y|Y|yes|Yes|yY|Yy|yy|YY|"")
 			mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
@@ -258,6 +258,211 @@ ctrl_c() {
 		rm -r /tmp/mirrorlist*
 		exit 1
 	fi
+
+}
+
+err() {
+
+    echo "$1" >&2
+	exit 1
+
+}
+
+# gettime fetchurl (e.g gettime http://foo.com/core/os/i686/core.db.tar.gz)
+# returns the fetching time, or timeout, or unreachable
+gettime() {
+
+    IFS=' ' output=( $(curl -s -m 10 -w "%{time_total} %{http_code}" "$1" -o/dev/null) )
+	(( $? == 28 )) && echo timeout && return
+	(( ${output[1]} >= 400 || ! ${output[1]} )) && echo unreachable && return
+	echo "${output[0]}"
+
+}
+
+# getfetchurl serverurl (e.g. getturl http://foo.com/core/os/i686)
+# if $repo is in the line, then assumes core
+# if $arch is in the line, then assumes $(uname -m)
+# returns a fetchurl (e.g. http://foo.com/core/os/i686/core.db.tar.gz)
+ARCH="$(uname -m)"
+getfetchurl() {
+
+    local strippedurl="${1%/}"
+
+	local replacedurl="${strippedurl//'$arch'/$ARCH}"
+	if [[ ! $TARGETREPO ]]; then
+		replacedurl="${replacedurl//'$repo'/core}"
+		local tmp="${replacedurl%/*}"
+		tmp="${tmp%/*}"
+
+		local reponame="${tmp##*/}"
+	else
+		replacedurl="${replacedurl//'$repo'/$TARGETREPO}"
+		local reponame="$TARGETREPO"
+	fi
+
+	if [[ -z $reponame || $reponame = $replacedurl ]]; then
+		echo "fail"
+	else
+		local fetchurl="${replacedurl}/$reponame.db"
+		echo "$fetchurl"
+	fi
+
+}
+
+# This exists to remove the need for a separate interrupt function
+finaloutput() {
+	IFS=$'\n' read -r -d '' -a sortedarray < \
+		<(printf '%s\n' "${timesarray[@]}" | LC_COLLATE=C sort)
+
+	# Final output for mirrorfile
+	numiterator="0"
+	if [[ $TIMESONLY ]]; then
+		echo
+		echo " Servers sorted by time (seconds):"
+		for line in "${sortedarray[@]}"; do
+			echo "${line#* } : ${line% *}"
+			((numiterator++))
+			(( NUM && numiterator >= NUM )) && break
+		done
+	else
+		for line in "${sortedarray[@]}"; do
+			echo "Server = ${line#* }"
+			((numiterator++))
+			(( NUM && numiterator >= NUM )) && break
+		done
+	fi
+	exit 0
+}
+
+
+rankmirrors() {
+
+    #   rankmirrors - read a list of mirrors from a file and rank them by speed
+    #   @configure_input@
+    #
+    #   Copyright (c) 2009 Matthew Bruenig <matthewbruenig@gmail.com>
+    #
+    #   This program is free software; you can redistribute it and/or modify
+    #   it under the terms of the GNU General Public License as published by
+    #   the Free Software Foundation; either version 3 of the License, or
+    #   (at your option) any later version.
+    #
+    #   This program is distributed in the hope that it will be useful,
+    #   but WITHOUT ANY WARRANTY; without even the implied warranty of
+    #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    #   GNU General Public License for more details.
+    #
+    #   You should have received a copy of the GNU General Public License
+    #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    # traps interrupt key to spit out pre-interrupt info
+    # Argument parsing
+    [[ $1 ]] || usage
+    while [[ $1 ]]; do
+    	if [[ ${1:0:2} = -- ]]; then
+    		case "${1:2}" in
+    			times) TIMESONLY=1 ; shift ;;
+    			verbose) VERBOSE=1 ; shift ;;
+    			url)
+    				CHECKURL=1;
+    				[[ $2 ]] || err "Must specify URL.";
+    				URL="$2";
+    				shift 2;;
+    			repo)
+    				[[ $2 ]] || err "Must specify repository name.";
+    				TARGETREPO="$2";
+    				shift 2;;
+    			*) err "'$1' is an invalid argument."
+    		esac
+    	elif [[ ${1:0:1} = - ]]; then
+
+    		if [[ ! ${1:1:1} ]]; then
+    			[[ -t 0 ]] && err "Stdin is empty."
+    			IFS=$'\n' linearray=( $(</dev/stdin) )
+    			STDIN=1
+    			shift
+    		else
+    			snum=1
+    			for ((i=1 ; i<${#1}; i++)); do
+    				case ${1:$i:1} in
+    					h) usage ;;
+    					t) TIMESONLY=1 ;;
+    					v) VERBOSE=1 ;;
+    					u)
+    						CHECKURL=1;
+    						[[ $2 ]] || err "Must specify URL.";
+    						URL="$2";
+    						snum=2;;
+    					r)
+    						[[ $2 ]] || err "Must specify repository name.";
+    						TARGETREPO="$2";
+    						snum=2;;
+    					n)
+    						[[ $2 ]] || err "Must specify number.";
+    						NUM="$2";
+    						snum=2;;
+    					*) err "'$1' is an invalid argument." ;;
+    				esac
+    			done
+    			shift $snum
+    		fi
+    	elif [[ -f $1 ]]; then
+    		FILE="1"
+    		IFS=$'\n' linearray=( $(<$1) )
+    		[[ $linearray ]] || err "File is empty."
+    		shift
+    	else
+    		err "'$1' does not exist."
+    	fi
+    done
+
+    # Some sanity checks
+    [[ $NUM ]] || NUM=0
+    [[ $FILE && $CHECKURL ]] && err "Cannot specify a URL and mirrorfile."
+    [[ $FILE || $CHECKURL || $STDIN ]] || err "Must specify URL, mirrorfile, or stdin."
+
+    # Single URL handling
+    if [[ $CHECKURL ]]; then
+    	url="$(getfetchurl "$URL")"
+    	[[ $url = fail ]] && err "URL '$URL' is malformed."
+    	[[ $VERBOSE ]] && echo "Testing $url..."
+    	time=$(gettime "$url")
+    	echo "$URL : $time"
+    	exit 0
+    fi
+
+    # Get URL results from mirrorfile, fill up the array, and so on
+    if [[ $TIMESONLY ]]; then
+    	echo "Querying servers. This may take some time..."
+    elif [[ $FILE ]]; then
+    	echo "# Server list generated by rankmirrors on $(date +%Y-%m-%d)"
+    fi
+
+    timesarray=()
+    for line in "${linearray[@]}"; do
+    	if [[ $line =~ ^[[:space:]]*# ]]; then
+    		[[ $TIMESONLY ]] || echo $line
+    	elif [[ $line =~ ^[[:space:]]*Server ]]; then
+
+    		# Getting values and times and such
+    		server="${line#*= }"
+    		server="${server%%#*}"
+    		url="$(getfetchurl "$server")"
+    		[[ $url = fail ]] && err "URL '$URL' is malformed."
+    		time=$(gettime "$url")
+    		timesarray+=("$time $server")
+
+    		# Output
+    		if [[ $VERBOSE && $TIMESONLY ]]; then
+    			echo "$server ... $time"
+    		elif [[ $VERBOSE ]]; then
+    			echo "# $server ... $time"
+    		elif [[ $TIMESONLY ]]; then
+    			echo -n "   *"
+    		fi
+    	fi
+    done
+    finaloutput
 
 }
 
