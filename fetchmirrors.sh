@@ -203,7 +203,7 @@ get_list() {
 	for list in $(echo "$query") ; do
 		if (curl -L -s "$list" | grep "Server" &>/dev/null); then
 			echo "${Yellow}Fetching new mirrorlist from:${Green} ${list}${ColorOff}"
-			curl =L -s "$list" | sed '1,4d' >> /tmp/mirrorlist
+			curl -L -s "$list" | sed '1,4d' >> /tmp/mirrorlist
 		elif (grep "Server" /tmp/mirrorlist &>/dev/null); then
 			echo -e "${Yellow}[${this}]${Red} Error: ${Yellow} Failed fetching mirrorlist from:${ColorOff} $list"
 			echo "${Yellow}Skipping...${ColorOff}"
